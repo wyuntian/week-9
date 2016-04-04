@@ -17,4 +17,12 @@ $(function() {
   $('#toggle-sidebar').click(function() {
     $body.toggleClass('sidebar-open');
   });
+
+  $('#mbutton').click(function(e) {
+    $('.sidebar').toggle('fast');
+    /*$body.toggleClass('sidebar-swicth');*/
+    e.preventDefault();
+    $('.map').toggle('fast');
+    $('.sidebar').toggleClass('fast');
+  });
 });

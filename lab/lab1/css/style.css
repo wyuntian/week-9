@@ -16,16 +16,17 @@ body {
 
 .map {
   position: absolute;
-  left: 440px;
+  left: 200px;
   right: 0;
   bottom: 0;
   top: 50px;
+  background-color: beige;
 }
 
 .sidebar {
   position: absolute;
   left: 0px;
-  width: 440px;
+  width: 200px;
   top: 50px;
   bottom: 0;
   padding: 20px;
@@ -44,11 +45,44 @@ body {
   color: #fff;
   display: block;
 }
+#mbutton{
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    z-index: 200;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+.extended-panel {
+  left: 0px !important;
+}
 
 @media screen and (min-width: 480px) and (max-width: 800px) {
+  .sidebar{
+    background-color:red;
+  }
 
 }
 
 @media screen and (max-width: 479px) {
-
+   .sidebar{
+    display:none;
+    width:115%;
+  }
+  .map {
+    left:0 !important;
+    width: 100% !important;
+    background-color:red !important;
+  }
+  #mbutton{
+  visibility: visible;
+  }
 }
